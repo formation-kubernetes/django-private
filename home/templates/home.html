@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Private With Config</title>
+        <style>
+            * {
+                font-size: 24px;
+            }
+            h1 {
+                font-size: 70px !important;
+            }
+            h2 {
+                font-size: 50px !important;
+            }
+        </style>
+    </head>
+    <body {% if member1 and member2 and member3 and team %}style="background: lightgreen; padding: 0; margin: 0;"{% endif %}>
+        <center>
+            <h1><i><s>REGISTRE PRIVÉ</s></i></h1>
+            <h2>
+                ÉQUIPE : <i>{{ team|upper }}</i>
+            </h2>
+            <div>
+                Membre d'équipe :
+                <ol>
+                    <li>Membre 1 : <b>{{ member1|upper }}</b></li>
+                    <li>Membre 2 : <b>{{ member2|upper }}</b></li>
+                    <li>Membre 3 : <b>{{ member3|upper }}</b></li>
+                </ol>
+            </div>
+        </center>
+    </body>
+</html>
